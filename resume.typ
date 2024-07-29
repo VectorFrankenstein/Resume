@@ -1,5 +1,4 @@
-
-#let content = yaml("test.yaml") // Get the content file
+#let content = yaml("information.yaml") // Get the content file
 // Set global params and values
 
 #set page(
@@ -48,35 +47,57 @@
 
 // My goal with these functions is to make them as reproducible as possible
 
-#let john_hancock(name_value) = {
-
-  set align(center)
-  set text(size: 2.0em, weight: "bold")
-  upper(name_value)
+#let contacts(entry) = {
+  if (entry.at("URL",default:none) != none and entry.at("Logo", default:none)!= none) {
+   box(image(entry.Logo),height:1em)
+   link(entry.URL)[#entry.Show]
+   //h(1fr)
+  } else if entry.at("URL", default:none) != none {
+   link(entry.URL)[#entry.Show]
+  } else if entry.at("Logo",default:none) != none {
+    box(image(entry.Logo),height:1em)
+    [#entry.Show]
+  } else {
+    [#entry.show]
+  }
 }
 
-#let title(my_title) = {
+#let introduction(content) = {
   set align(center)
-  set text(size: 1.25em,weight: "bold")
-  my_title
-}
+  
+  [
+    #set text(size: 2.0em, weight: "bold")
+    
+    #upper(content.Name)
+    
+    #v(-0.75em)
+  ]
 
-#let city(my_city) = {
-  set align(center)
-  set text(size: 1.0em)
-  my_city
-}
+  
+  [
+    #set text(size: 1.25em, weight: "bold")
+    
+    #content.Profession
+    
+    #v(-0.75em)
+  ]
+  
+  [
+    #set text(size: 1em)
+    
+    #content.Location
 
-#let contacts(info) = {
-  set align(center)
-  set text(size: 9.5pt,)
-  block(width: 100%)[
-    #link("mailto:" + info.Email); ✯
-    #link("tel:" + info.Phone); ✯
-    #link(info.LinkedIn)[LinkedIn:Rijan Dhakal]; ✯
-    #link(info.GitHub)[GitHub:RijanHasTwoEars7]; ✯
-    #link(info.Orcid)[Orcid:0000-0002-9625-3584];
-  ] 
+    #v(-0.75em)  
+  ]
+
+
+  [
+    #set text(size: 11pt)
+      
+    #for entry in content.Contacts [
+     #contacts(entry)
+    ]
+  ]
 }
 
 #let section(section_name) = {
@@ -152,19 +173,7 @@
 
 #v(-1em)
 
-#john_hancock(content.Introduction.Primary.Name)
-
-#v(-1.5em)
-
-#title(content.Introduction.Primary.Title)
-
-#v(-1em)
-
-#city(content.Introduction.Primary.Location)
-
-#v(-1em)
-
-#contacts(content.Introduction.Secondary)
+#introduction(content.Introduction)
 
 #v(-1em)
 

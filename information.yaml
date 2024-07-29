@@ -1,15 +1,28 @@
 Introduction:
-  Primary: 
-    Name: Rijan dhakal
-    Title: Bioinformatician
-    Location: Saint Louis, Missouri, United States of America
-  Secondary:
-    Email: rijan_dhakal2055@protonmail.com
-    Phone: (+1)256-535-3955
-    #Website: 
-    LinkedIn: https://www.linkedin.com/in/rijan-d-488853224/
-    GitHub: https://gitlab.com/RijanHasTwoEars7
-    Orcid: 0000-0002-9625-3584
+  Name: Rijan Dhakal
+  Profession: Bioinformatician
+  Location: St. Louis, Missouri, United States
+  Contacts:
+    -
+      Show: rijan_dhakal2055@protonmail.com
+      URL: 'mailto:rijan_dhakal2055@protonmail.com'
+      Logo: "logos/at.svg"
+    - 
+      Show: (+1) 256 535 3955
+      URL: "tel: 256 535 3955"
+      Logo: "logos/phone.svg"
+    -
+      Show: "RijanHasTwoEars7"
+      URL: "https://github.com/RijanHasTwoEars7"
+      Logo: "logos/github.svg"
+    - 
+      Show: "0000-0002-9625-3584 "
+      URL: "https://orcid.org/my-orcid?orcid=0000-0002-9625-3584"
+      Logo: "logos/orcid.svg"
+    -
+      Show: "Rijan Dhakal"
+      URL: "https://www.linkedin.com/in/rijan-d-488853224/"
+      Logo: "logos/linkedin.svg"
 
 Experience:
   -
