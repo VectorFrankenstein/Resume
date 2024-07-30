@@ -111,17 +111,26 @@
 
 #let experience_function(experience_entry) = {
   [
-    *#underline[#experience_entry.Company]* #h(1fr) *#experience_entry.Location* \
-    #text(style: "italic")[#experience_entry.Position] #h(1fr) #experience_entry.Start - #experience_entry.End \ 
-    #for tasks in experience_entry.Tasks [
-      - #eval(tasks, mode: "markup")
-    ] #v(-0.25em) 
+    #if (experience_entry.at("URL", default: none) != none) [
+      *#underline[#link(experience_entry.URL)[#experience_entry.Company]]* #h(1fr) *#experience_entry.Location* \
+    ] else [
+      *#underline[#experience_entry.Company]* #h(1fr) *#experience_entry.Location* \
+    ]
+    #text(style: "italic")[#experience_entry.Position] #h(1fr) #experience_entry.Start - #experience_entry.End
+    #for task in experience_entry.Tasks [
+      - #eval(task, mode: "markup")
+    ]
+    #v(-0.25em)
   ]
 }
 
 #let education_entry(education_entry) = {
   [
-    *#underline[#education_entry.Institute]* #h(1fr) *#education_entry.Location* \
+    #if (education_entry.at("URL", default: none) != none) [
+      *#underline[#link(education_entry.URL)[#education_entry.Institute]]* #h(1fr) *#education_entry.Location* \
+    ] else [
+      *#underline[#education_entry.Institute]* #h(1fr) *#education_entry.Location* \
+    ]
     #text(style: "italic")[#education_entry.Degree] #h(1fr) #education_entry.Start - #education_entry.End \ 
     #for (name,value) in education_entry.Metadata [
       *#name* : #value \
@@ -131,7 +140,6 @@
 
 
 #let skills_entry(skills_entry) = {
-
   [
     *#underline[#skills_entry.Section]* \
     #for (hit, details) in skills_entry.Details [
@@ -143,7 +151,12 @@
 // To list out the project you have worked in
 #let projects_function(project_entry) = {
   [
-    *#underline[#project_entry.Name]* #h(1fr) #project_entry.Start - #project_entry.End \ 
+    
+    #if (project_entry.at("URL", default: none) != none) [
+      *#underline[#link(project_entry.URL)[#project_entry.Name]]* #h(1fr) #project_entry.Start - #project_entry.End \
+    ] else [
+      *#underline[#project_entry.Name]* #h(1fr) #project_entry.Start - #project_entry.End \ 
+    ]
     #for tasks in project_entry.Highlights [
       - #eval(tasks, mode: "markup")
     ] #v(-0.25em) 
@@ -152,7 +165,11 @@
 
 #let publication_entry(publication_entry) = {
   [
-    *#underline[#publication_entry.Name]* #h(1fr) *#publication_entry.Contribution* \
+    #if (publication_entry.at("URL", default: none) != none) [
+      *#underline[#link(publication_entry.URL)[#publication_entry.Name]]* #h(1fr) *#publication_entry.Contribution* \
+    ] else [
+      *#underline[#publication_entry.Name]* #h(1fr) *#publication_entry.Contribution* \
+    ]
     #publication_entry.DOI #h(1fr) #publication_entry.Date \
     #v(-0.5em)
   ]
