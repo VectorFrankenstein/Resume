@@ -100,15 +100,6 @@
   ]
 }
 
-#let section(section_name) = {
-  set align(left)
-  set text(size: 1.5em, weight: "bold")
-  v(2pt)
-  section_name
-
-  line(length: 100%, stroke: 1pt + black)
-}
-
 #let experience_function(experience_entry) = {
   [
     #if (experience_entry.at("URL", default: none) != none) [
@@ -153,9 +144,9 @@
   [
     
     #if (project_entry.at("URL", default: none) != none) [
-      *#underline[#link(project_entry.URL)[#project_entry.Name]]* #h(1fr) #project_entry.Start - #project_entry.End \
+      *#underline[#link(project_entry.URL)[#project_entry.Name]]* #h(1fr) *#project_entry.Start* - *#project_entry.End* \
     ] else [
-      *#underline[#project_entry.Name]* #h(1fr) #project_entry.Start - #project_entry.End \ 
+      *#underline[#project_entry.Name]* #h(1fr) *#project_entry.Start* - *#project_entry.End* \ 
     ]
     #for tasks in project_entry.Highlights [
       - #eval(tasks, mode: "markup")
