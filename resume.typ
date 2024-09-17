@@ -100,6 +100,7 @@
   ]
 }
 
+
 #let experience_function(experience_entry) = {
   [
     #if (experience_entry.at("URL", default: none) != none) [
@@ -203,11 +204,19 @@
 
 = Skills
 
-#for entry in content.Skills {
-  skills_entry(entry)
-}
+// The grid makes it such that the items are distributed into two columns
+// For more information
+// visit https://stackoverflow.com/questions/78938372/how-to-send-content-into-specific-boxes-in-typst
 
-#v(-0.75em) // compensate for line spacing
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 1em,
+  row-gutter: 1em,
+  ..content.Skills.map(entry => skills_entry(entry))
+)
+
+//#v(-0.75em) // compensate for line spacing
+#pagebreak()
 
 = Education 
 
