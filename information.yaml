@@ -4,131 +4,115 @@ Introduction:
   Location: St. Louis, Missouri, United States
   Contacts:
     -
-      Show: rijan_dhakal2055@protonmail.com
-      URL: 'mailto:rijan_dhakal2055@protonmail.com'
+      Show: rijan_dhakal@outlook.com
+      URL: 'mailto:rijan_dhakal@outlook.com'
       Logo: "logos/at.svg"
-    - 
-      Show: (+1) 256 535 3955
-      URL: "tel: 256 535 3955"
-      Logo: "logos/phone.svg"
     -
-      Show: "RijanHasTwoEars7"
-      URL: "https://github.com/RijanHasTwoEars7"
-      Logo: "logos/github.svg"
-    - 
-      Show: "0000-0002-9625-3584 "
-      URL: "https://orcid.org/my-orcid?orcid=0000-0002-9625-3584"
-      Logo: "logos/orcid.svg"
-    -
-      Show: "Rijan Dhakal"
-      URL: "https://www.linkedin.com/in/rijan-d-488853224/"
+      Show: "https://www.linkedin.com/in/rijan-dhakal/"
+      URL: "https://www.linkedin.com/in/rijan-dhakal/"
       Logo: "logos/linkedin.svg"
 
 Experience:
   -
     Company: Metablify LLC
     URL: "https://www.danforthcenter.org/news/big-ideas-3-0/"
-    Position: Bioinformatics Lab Assitant
+    Position: Data and pipeline engineering
     Location: Creve Coeur, Missouri
     Start: April 2024
     End: Present
     Tasks:
-      - A ton of bioinformatics.
+      - As a Computational Biologist in a small team of four within a non-profit academic research institution, I collaborated with a Principal Investigator, a Biophysicist, and a Biostatistician to overhaul our computational infrastructure. My responsibility was to enhance the speed, cost-efficiency, and accessibility of our analytical platform for untargeted liquid chromatography-mass spectrometry (LC-MS).
+      - 98\% reduction in data processing time :- I optimized our untargeted metabolomics pipeline using Python, Dask, and PBS cluster on a Linux environment. This enabled faster iterations and advanced our novel scientific research in developing algorithms that provide higher quality signal out of untargeted LC-MS.
+      - 90\% reduction in capital costs :- By optimizing code execution, I cut computational costs from hundreds of dollars to approximately \$20 per run, freeing resources for further research and innovation.
+      - Scalability and modernization :- I refactored data structures and infrastructure, migrating the platform from a limited local cluster to an AWS-based Slurm cluster, supporting larger datasets and future growth. I also modernized the codebase, making it modular, maintainable, and accessible to non-programmers.
+      - Enhanced collaboration and knowledge transfer :- I introduced Jupyter notebooks, enabling non-programmers to perform complex analyses and accelerating experimental workflows. I provided ongoing support and training, ensuring a smooth transition to the new system.
+      - Improved performance and reliability :- I updated software architecture, replacing deprecated libraries and restoring critical functionalities.
+      - Our team was able to meet key milestones on schedule, advancing our pipeline in groundbreaking research and innovation in metabolomics. Specifically, our work focused on developing algorithms that provide higher quality signals out of untargeted LC-MS, a critical area of research with significant implications for the field.
   -
     Company: Donald Danforth Plant Sciences Center
     URL: "https://www.danforthcenter.org/"
-    Position: Bioinformatics Lab Assitant
+    Position: Comutational Biology
     Location: Creve Coeur, Missouri
     Start: May 2023
     End: Present
     Tasks:
-      - A ton of bioinformatics
+      - As a computational biologist, I combine expertise in biology, chemistry, and programming to tackle complex research challenges. By integrating analytical chemistry, biochemistry, genetics, and software development, I deliver impactful scientific results.
+      - Developed a Novel Computational Pipeline:- Created a pipeline for an innovative LC-MS algorithm, extracting meaningful data from over 60,000 mass features. This involved detecting metabolic signals through precise analysis of chemical mass differences, generating valuable feedback for upstream algorithms.
+      - Streamlined Analytical Chemistry Challenges:- Applied programming and data interpretation skills to provide biologically relevant insights, addressing complex analytical chemistry challenges.
+      - Reconstructed a Critical Multi-Omics Study:- Revitalized a 2019 study by addressing missing data, limited documentation, and disorganized code, salvaging valuable research.
+      - Established an Industry Benchmark:- Contributed to the development of an industry-recognizable benchmark showcasing our team's tools, enabling effective storytelling and advertising of our capabilities.
+      - Transformed a Fragmented Codebase:- Refactored a bash codebase into a versatile, user-friendly R package, extending the tool's functionality from three to all species, and solving issues with legacy code and outdated libraries. The tool is now publicly available and accessible to non-programming biologists.
+      - Revived and Modernized Legacy Data:- Restored 16-year-old ionomics data from a deprecated system, verifying data integrity and modernizing the system for public access. This prevented data loss and opened new potential funding opportunities.
+      - Fostered Collaboration and Technical Support:- Provided regular assistance to colleagues with programming, HPC, and Linux, helping them navigate technical challenges and promoting a collaborative environment.
+
   - 
     Company: Wolf Lab
     URL: "https://web.archive.org/web/20240222075652/https://paulwolflab.com/"
-    Position: Research Associate
+    Position: Graduate Research Scientist
     Location: Remote
     Start: January 2023
     End: December 2023
     Tasks:
-      - Novel research
-  -
-    Company: Department of Biological Sciences, UAH
-    URL: "https://www.uah.edu/science/departments/biology"
-    Position: Graduate Research Assitant
-    Location: Huntsville, Alabama
-    Start: May 2021
-    End: December 2022
-    Tasks:
-      - Novel research
+      - As an independent researcher, I conducted a comprehensive genomics analysis, building on my master's project. I worked with a large dataset of 112 plant species to investigate evolutionary signals, employing a range of computational tools and techniques.
+      - Analyzed genomic data using cutting-edge tools like CAFE5, iq-tree, and HyPhy BUSTED-PH to identify evolutionary trends and key gene families.
+      - Implemented homology inference techniques, comparing leading software libraries (MUSCLE, MAFFT) to select the best tools for gene sequence analysis and tree generation.
+      - Independently managed hardware, software setup, and debugging, ensuring seamless operation with large-scale datasets.
+      - Developed a robust system to maintain data integrity, managing hundreds of input files and millions of output files.
+      - Wrote clean, reusable code, building modular pipelines to optimize genomic data analysis and ensure future project scalability.
+      - Co-authored a manuscript (currently available as a pre-print) presenting the findings of this multi-disciplinary research.
+      - Ability to learn and implement new software and technologies
+      - Strong problem-solving skills, with independence in managing complex projects
+      - Effective communication of technical research findings to both technical and non-technical audiences
 
 Education:
   - 
     Institute: University of Alabama in Huntsville
     URL: "https://www.uah.edu/"
     Location: Huntsville, Alabama
-    Degree: Masters of Science in Life Sciences
+    Degree: Master of Science in Life Sciences, President's List
     Start: Fall 2022
     End: Fall 2023
-    Metadata:
-      Honors: 4.0 / 4.0 GPA, President's List
-      Courses: Plant genomics, Bioinforamtatics, Biostatistics
-      Thesis: Genomic Changes Associated with Transitions to Heterospory and Genome Downsizing in Land Plants
-      Activities: Novel research, Scientific writing, Presentation
   -
     Institute: University of Alabama in Huntsville
     URL: "https://www.uah.edu/"
     Location: Huntsville, Alabama
-    Degree: Bachelors of Science Biochemistry
+    Degree: Bachelors of Science Biochemistry, Magna cum laude
     Start: Fall 2017
     End: Spring 2021
-    Metadata:
-      Honors: 3.862 / 4.0 GPA, President's List
-      Courses: Physical chemistry I & II, Biochemistry I & II, Technical writing, etc.
-      Activities: Wet-lab research, Volunteering
-
-
 Skills:
   -
-    Section: Programming and Development
+    Section: Programming Languages
     Details:
-        Linux: Nix, RPM, DEB, SSH
         Python: Polars, Pandas, Matplotlib, Dask, Dask Distributed, Conda/Mamba, Biopython, Threading, Multiprocessing
         Bash: Elaborate scripting, AWK, Sed
         R: Tidyverse, GGplot2, data.table
         Julia: DataTables.Jl
-        Databases: Postgres, DuckDB
-        Version Control: Git, Mercurial
-        HPC: SLURM, PBS
-        Hyperscalers: AWS (EC2, S3, EFS, EBS)
-        Typesetting: Latex, Typst
-        Webdev: Hugo
   -
-    Section: Academic skills
-    Details:      
-      Literature: Technical Writing, Scientific writing, Literature review
-      Soft skills: Presentations, Public speaking, Scientific collaboration
-      
-Projects:
+    Section: Databases
+    Details:
+      Postgres: Database schema development and upkeep
+      DuckDB: Resource constrained data-analysis
+  - 
+    Section: Infrastructure
+    Details:
+      Cloud Computing: Amazon Web Services (AWS)
+      Local computing: Local workstation hardware setup and upkeep
   -
-    Name: IAA pipeline refactor, optimization and transition
-    Start: October 2023
-    End: December 2023
-    Highlights:
-      - Refactored an inter-disciplinary novel untargeted LCMS R/Python pipeline with circa 4k lines of code.
-      - Optimized the codebase to be at least a few thousand times faster.
-      - Refactoring lead to the codebase becoming more readible, ergonomic, re-useable and scalable.
-      - Moved the pipeline from a local SLURM cluster to AWS. 
+    Section: Tools
+    Details:
+      Linux: RPM, DEB, Nix
+      HPC: SLURM, PBS, HTC-condor, Open-MPI
+      Version control: Git, Mercurial
+      Typesetting: Latex, Typst
+      Webdev: Hugo
   -
-    Name: Genomic Changes associated with heterospory.
-    Start: January 2023
-    End: July 2024
-    Highlights:
-      - Trained for basic and applied science under two experienced academic scientists, learning both novel and established methodologies related to plant evolutionary genomics.
-      - Literary deep dives, data search, data analysis and reuseable/efficient programming.
-      - Collaborative scientific research, presentation, documentation and scientific writing.
-      - Led to the submission of pre-print (https://doi.org/10.1101/2024.07.23.604804) and currently pursuing publication.
-
+    Section: Languages
+    Details:
+      Natural proficiency: English, Nepalese
+  - 
+    Section: Wet-lab skillset
+    Details:
+      Benchwork: Familiarity with wet-lab processes/output from experience.     
 Publications:
   -
     Name: (Pre-print) Chromosome Numbers and Reproductive Life Cycles in Green Plants, A Genomic Perspective

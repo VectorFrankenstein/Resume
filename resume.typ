@@ -50,15 +50,15 @@
 #let contacts(entry) = {
   if (entry.at("URL",default:none) != none and entry.at("Logo", default:none)!= none) {
    box(image(entry.Logo),height:1em)
-   link(entry.URL)[#entry.Show]
-   //h(1fr)
+   link(entry.URL)[#entry.Show] 
+   h(1cm)
   } else if entry.at("URL", default:none) != none {
-   link(entry.URL)[#entry.Show]
+   link(entry.URL)[#entry.Show] 
   } else if entry.at("Logo",default:none) != none {
     box(image(entry.Logo),height:1em)
-    [#entry.Show]
+    [#entry.Show] 
   } else {
-    [#entry.show]
+    [#entry.show] 
   }
 }
 
@@ -103,12 +103,12 @@
 
 #let experience_function(experience_entry) = {
   [
+    *#experience_entry.Position* #h(1fr) *#experience_entry.Start* - *#experience_entry.End* \
     #if (experience_entry.at("URL", default: none) != none) [
-      *#underline[#link(experience_entry.URL)[#experience_entry.Company]]* #h(1fr) *#experience_entry.Location* \
+      #underline[#link(experience_entry.URL)[#experience_entry.Company]] #h(1fr) #experience_entry.Location \
     ] else [
-      *#underline[#experience_entry.Company]* #h(1fr) *#experience_entry.Location* \
+      #underline[#experience_entry.Company] #h(1fr) #experience_entry.Location \
     ]
-    #text(style: "italic")[#experience_entry.Position] #h(1fr) #experience_entry.Start - #experience_entry.End
     #for task in experience_entry.Tasks [
       - #eval(task, mode: "markup")
     ]
@@ -124,12 +124,10 @@
       *#underline[#education_entry.Institute]* #h(1fr) *#education_entry.Location* \
     ]
     #text(style: "italic")[#education_entry.Degree] #h(1fr) #education_entry.Start - #education_entry.End \ 
-    #for (name,value) in education_entry.Metadata [
-      *#name* : #value \
-    ] #v(-0.25em) 
   ]
 }
 
+pagebreak()
 
 #let skills_entry(skills_entry) = {
   [
@@ -140,42 +138,18 @@
   ]
 }
 
-// To list out the project you have worked in
-#let projects_function(project_entry) = {
-  [
-    
-    #if (project_entry.at("URL", default: none) != none) [
-      *#underline[#link(project_entry.URL)[#project_entry.Name]]* #h(1fr) *#project_entry.Start* - *#project_entry.End* \
-    ] else [
-      *#underline[#project_entry.Name]* #h(1fr) *#project_entry.Start* - *#project_entry.End* \ 
-    ]
-    #for tasks in project_entry.Highlights [
-      - #eval(tasks, mode: "markup")
-    ] #v(-0.25em) 
-  ]
-}
-
 #let publication_entry(publication_entry) = {
   [
     #if (publication_entry.at("URL", default: none) != none) [
-      *#underline[#link(publication_entry.URL)[#publication_entry.Name]]* #h(1fr) *#publication_entry.Contribution* \
+      *#underline[#link(publication_entry.URL)[#publication_entry.Name]]* #h(1fr) *#publication_entry.Date*\
     ] else [
-      *#underline[#publication_entry.Name]* #h(1fr) *#publication_entry.Contribution* \
+      *#underline[#publication_entry.Name]* #h(1fr) *#publication_entry.Date*\
     ]
-    #publication_entry.DOI #h(1fr) #publication_entry.Date \
+    #publication_entry.DOI \
     #v(-0.5em)
   ]
 }
 
-#let awards_function(awards_entry) = {
-  [
-    *#underline[#awards_entry.Name]* #h(1fr) *#awards_entry.Organization* \
-    #awards_entry.Date \
-    #for note in awards_entry.Notes [
-      - #note
-    ] #v(-0.5em)
-  ]
-}
 // Actual content
 
 // For now there are these manually written #v() adjustments throughout the page because I do not know a better way.
@@ -194,14 +168,6 @@
 
 #v(-0.75em) // to compensate for the previous sections's trailing white space
 
-= Projects
-
-#for entry in content.Projects {
-  projects_function(entry)
-}
-
-#v(-0.75em)
-
 = Skills
 
 // The grid makes it such that the items are distributed into two columns
@@ -214,9 +180,6 @@
   row-gutter: 1em,
   ..content.Skills.map(entry => skills_entry(entry))
 )
-
-//#v(-0.75em) // compensate for line spacing
-#pagebreak()
 
 = Education 
 
@@ -233,9 +196,3 @@
 }
 
 #v(-0.75em)
-
-= Awards
-
-#for entry in content.Awards {
-  awards_function(entry)
-}
