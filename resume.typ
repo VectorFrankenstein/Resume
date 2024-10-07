@@ -127,7 +127,6 @@
   ]
 }
 
-pagebreak()
 
 #let skills_entry(skills_entry) = {
   [
@@ -167,6 +166,8 @@ pagebreak()
 // #work_entry(content.Work)
 
 #v(-0.75em) // to compensate for the previous sections's trailing white space
+
+#pagebreak()
 
 = Skills
 

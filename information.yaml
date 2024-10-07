@@ -83,9 +83,9 @@ Skills:
   -
     Section: Programming Languages
     Details:
-        Python: Polars, Pandas, Matplotlib, Dask, Dask Distributed, Conda/Mamba, Biopython, Threading, Multiprocessing
+        Python: Threading, Multi-processing, Dask, Dask-Distributed, Pandas, Polars, Matplotlib, Conda/Mamba, Biopython       
         Bash: Elaborate scripting, AWK, Sed
-        R: Tidyverse, GGplot2, data.table
+        R: Tidyverse, Rcpp ,GGplot2, data.table
         Julia: DataTables.Jl
   -
     Section: Databases
@@ -101,7 +101,7 @@ Skills:
     Section: Tools
     Details:
       Linux: RPM, DEB, Nix
-      HPC: SLURM, PBS, HTC-condor, Open-MPI
+      HPC: SLURM, PBS, HTC-condor, NFS
       Version control: Git, Mercurial
       Typesetting: Latex, Typst
       Webdev: Hugo
