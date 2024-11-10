@@ -127,13 +127,17 @@
   ]
 }
 
-
 #let skills_entry(skills_entry) = {
   [
+    #v(-0.10em)
     *#underline[#skills_entry.Section]* \
-    #for (hit, details) in skills_entry.Details [
-      *#hit* : #details \
-    ] #v(-0.25em) // Add some space for the next section
+    #for hit in skills_entry.Tools [
+      #v(-0.25em)
+      *#hit.Tool*: \ 
+      #for entry in hit.Tasks [
+        - #entry \
+      ]
+    ] 
   ]
 }
 
@@ -175,12 +179,9 @@
 // For more information
 // visit https://stackoverflow.com/questions/78938372/how-to-send-content-into-specific-boxes-in-typst
 
-#grid(
-  columns: (1fr, 1fr),
-  column-gutter: 1em,
-  row-gutter: 1em,
-  ..content.Skills.map(entry => skills_entry(entry))
-)
+#for entry in content.Skills {
+  skills_entry(entry)
+}
 
 = Education 
 

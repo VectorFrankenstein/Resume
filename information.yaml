@@ -53,7 +53,7 @@ Experience:
     Start: January 2023
     End: December 2023
     Tasks:
-      - As an independent researcher, I conducted a comprehensive genomics analysis, building on my master's project. I worked with a large dataset of 112 plant species to investigate evolutionary signals, employing a range of computational tools and techniques.
+      - As a semi-independent researcher, I conducted a comprehensive genomics analysis, building on my master's project. I worked with a large dataset of 112 plant species to investigate evolutionary signals, employing a range of computational tools and techniques.
       - Analyzed genomic data using cutting-edge tools like CAFE5, iq-tree, and HyPhy BUSTED-PH to identify evolutionary trends and key gene families.
       - Implemented homology inference techniques, comparing leading software libraries (MUSCLE, MAFFT) to select the best tools for gene sequence analysis and tree generation.
       - Independently managed hardware, software setup, and debugging, ensuring seamless operation with large-scale datasets.
@@ -79,40 +79,57 @@ Education:
     Degree: Bachelors of Science Biochemistry, Magna cum laude
     Start: Fall 2017
     End: Spring 2021
+
 Skills:
-  -
-    Section: Programming Languages
-    Details:
-        Python: Threading, Multi-processing, Dask, Dask-Distributed, Pandas, Polars, Matplotlib, Conda/Mamba, Biopython       
-        Bash: Elaborate scripting, AWK, Sed
-        R: Tidyverse, Rcpp ,GGplot2, data.table
-        Julia: DataTables.Jl
-  -
-    Section: Databases
-    Details:
-      Postgres: Database schema development and upkeep
-      DuckDB: Resource constrained data-analysis
-  - 
-    Section: Infrastructure
-    Details:
-      Cloud Computing: Amazon Web Services (AWS)
-      Local computing: Local workstation hardware setup and upkeep
-  -
-    Section: Tools
-    Details:
-      Linux: RPM, DEB, Nix
-      HPC: SLURM, PBS, HTC-condor, NFS
-      Version control: Git, Mercurial
-      Typesetting: Latex, Typst
-      Webdev: Hugo
-  -
-    Section: Languages
-    Details:
-      Natural proficiency: English, Nepalese
-  - 
-    Section: Wet-lab skillset
-    Details:
-      Benchwork: Familiarity with wet-lab processes/output from experience.     
+  - Section: Programming
+    Tools:
+      - Tool: Python
+        Tasks:
+          - Designed and implemented maintainable, robust, and scalable architectures using Dask and Dask-Distributed.
+          - Utilized Python's Threading and Multi-Processing libraries to optimize resource utilization and achieve major time improvements.
+          - Proficient in data wrangling, analysis, and visualization using Pandas, Polars, NumPy, and Matplotlib.
+          - Skilled in dependency management with Conda/Mamba, resolving conflicts manually when necessary.
+          - Proven ability to refactor legacy codebases, revitalizing stagnant projects with commitment to writing clear, well-documented, and performant code accessible to both technical and non-technical stakeholders.
+      - Tool: Bash
+        Tasks:
+          - Proven ability to craft clear, efficient Bash scripts and CLI tools for automation and system optimization.
+      - Tool: R
+        Tasks:
+          - Utilized usethis, devtools, and R Markdown to develop R packages implementing complex scientific workflows.
+          - Optimized existing workflows with Rcpp, achieving significant performance gains within the R ecosystem.
+          - Proficient in leveraging Tidyverse, Data.table, and Ggplot2 for Data wrangling and cleaning, Statistical analysis,Data visualization
+  - Section: Infrastructure
+    Tools:
+      - Tool: Amazon Web Services
+        Tasks:
+          - Proficient in AWS tools, including S3, EC2, EBS, and EFS, with a focus on designing scalable, robust, accessible, optimized, and cost-efficient systems.
+          - Developed user-friendly systems accessible to non-technical stakeholders.
+          - Successfully migrated large codebases from local to cloud environments, ensuring timely and efficient transitions.
+      - Tool: Local High-Performance Computing
+        Tasks:
+          - Set up and maintained local hardware and software for scientific research, ensuring seamless operations.
+          - Proficient in resource management tools, including SLURM, PBS, and HTCondor.
+          - Experienced in compiling, executing and maintaining scientific software from source.
+          - Experienced in leveraging distributed and parallel computing architectures.
+          - Skilled in containerization using Kubernetes, Singularity, and Docker.
+  - Section: Operating Systems and Tools
+    Tools:
+      - Tool: Linux
+        Tasks:
+          - Years of experience with using Linux exclusively for personal and professional projects.
+          - Able to work across various Linux distributions, including Ubuntu, RHEL, and Nix.
+          - Proficient in Linux fundamentals, including command line interface, file systems, secure shells, sockets, ports, and hardware drivers.
+          - Distributed Computing:- Linux machine management, containerization tools.
+      - Tool: Version Control
+        Tasks:
+          - Proficient in Git version control.
+          - Experienced in Continuous Integration/Continuous Deployment (CI/CD) pipelines.
+          - Skilled in Test-Driven Development (TDD) utilizing GitHub Actions.
+      - Tool: Postgres
+        Tasks:
+          - Proficient in Postgres and psql syntax for database interaction, creation, and maintenance.
+          - Experienced in database schema design for scientific data, including reverse engineering lost schemas.
+
 Publications:
   -
     Name: (Pre-print) Chromosome Numbers and Reproductive Life Cycles in Green Plants, A Genomic Perspective
